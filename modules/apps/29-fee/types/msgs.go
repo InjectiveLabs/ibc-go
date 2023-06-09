@@ -158,6 +158,10 @@ func (msg MsgPayPacketFee) GetSignBytes() []byte {
 	return sdk.MustSortJSON(AminoCdc.MustMarshalJSON(&msg))
 }
 
+func (msg MsgPayPacketFee) Type() string {
+	return "msgPayPacketFee"
+}
+
 // NewMsgPayPacketAsync creates a new instance of MsgPayPacketFee
 func NewMsgPayPacketFeeAsync(packetID channeltypes.PacketId, packetFee PacketFee) *MsgPayPacketFeeAsync {
 	return &MsgPayPacketFeeAsync{
@@ -197,4 +201,8 @@ func (msg MsgPayPacketFeeAsync) Route() string {
 // GetSignBytes implements sdk.Msg.
 func (msg MsgPayPacketFeeAsync) GetSignBytes() []byte {
 	return sdk.MustSortJSON(AminoCdc.MustMarshalJSON(&msg))
+}
+
+func (msg MsgPayPacketFeeAsync) Type() string {
+	return "msgPayPacketFeeAsync"
 }
