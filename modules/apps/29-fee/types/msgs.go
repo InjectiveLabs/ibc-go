@@ -69,6 +69,10 @@ func (msg MsgRegisterPayee) GetSigners() []sdk.AccAddress {
 	return []sdk.AccAddress{signer}
 }
 
+func (msg MsgRegisterPayee) Type() string {
+	return "msgRegisterPayee"
+}
+
 // NewMsgRegisterCounterpartyPayee creates a new instance of MsgRegisterCounterpartyPayee
 func NewMsgRegisterCounterpartyPayee(portID, channelID, relayerAddr, counterpartyPayeeAddr string) *MsgRegisterCounterpartyPayee {
 	return &MsgRegisterCounterpartyPayee{
@@ -113,6 +117,10 @@ func (msg MsgRegisterCounterpartyPayee) GetSigners() []sdk.AccAddress {
 	}
 
 	return []sdk.AccAddress{signer}
+}
+
+func (msg MsgRegisterCounterpartyPayee) Type() string {
+	return "msgRegisterCounterpartyPayee"
 }
 
 // NewMsgPayPacketFee creates a new instance of MsgPayPacketFee
