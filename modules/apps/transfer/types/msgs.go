@@ -79,5 +79,5 @@ func (msg MsgTransfer) GetSigners() []sdk.AccAddress {
 }
 
 func (msg MsgTransfer) Type() string {
-	return "ibc_transfer"
+	return "msg_transfer"
 }
