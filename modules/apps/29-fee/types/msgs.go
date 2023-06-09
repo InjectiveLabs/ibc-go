@@ -5,7 +5,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	legacytx "github.com/cosmos/cosmos-sdk/x/auth/migrations/legacytx"
+	"github.com/cosmos/cosmos-sdk/x/auth/migrations/legacytx"
 
 	channeltypes "github.com/cosmos/ibc-go/v7/modules/core/04-channel/types"
 	host "github.com/cosmos/ibc-go/v7/modules/core/24-host"
@@ -73,6 +73,10 @@ func (msg MsgRegisterPayee) GetSigners() []sdk.AccAddress {
 	return []sdk.AccAddress{signer}
 }
 
+func (msg MsgRegisterPayee) Type() string {
+	return "msgRegisterPayee"
+}
+
 // NewMsgRegisterCounterpartyPayee creates a new instance of MsgRegisterCounterpartyPayee
 func NewMsgRegisterCounterpartyPayee(portID, channelID, relayerAddr, counterpartyPayeeAddr string) *MsgRegisterCounterpartyPayee {
 	return &MsgRegisterCounterpartyPayee{
@@ -113,6 +117,10 @@ func (msg MsgRegisterCounterpartyPayee) GetSigners() []sdk.AccAddress {
 	}
 
 	return []sdk.AccAddress{signer}
+}
+
+func (msg MsgRegisterCounterpartyPayee) Type() string {
+	return "msgRegisterCounterpartyPayee"
 }
 
 // NewMsgPayPacketFee creates a new instance of MsgPayPacketFee
