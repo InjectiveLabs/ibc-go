@@ -191,6 +191,7 @@ require (
 )
 
 replace (
+	cosmossdk.io/store => github.com/InjectiveLabs/cosmos-sdk/store v1.0.1-inj-1
 	github.com/cosmos/cosmos-sdk => github.com/InjectiveLabs/cosmos-sdk v0.50.2-inj-1-bez
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
 )
