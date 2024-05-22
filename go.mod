@@ -114,7 +114,7 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v1.4.0 // indirect
 	github.com/gsterjov/go-libsecret v0.0.0-20161001094733-a6f4afe4910c // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
-	github.com/hashicorp/go-getter v1.7.1 // indirect
+	github.com/hashicorp/go-getter v1.7.3 // indirect
 	github.com/hashicorp/go-hclog v1.5.0 // indirect
 	github.com/hashicorp/go-immutable-radix v1.3.1 // indirect
 	github.com/hashicorp/go-plugin v1.5.2 // indirect
@@ -201,4 +201,14 @@ require (
 	sigs.k8s.io/yaml v1.4.0 // indirect
 )
 
-replace github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
+replace (
+	cosmossdk.io/store => github.com/InjectiveLabs/cosmos-sdk/store v1.1.1-0.20240514133821-c9bef3f12c8f
+	cosmossdk.io/x/evidence => github.com/InjectiveLabs/cosmos-sdk/x/evidence v0.1.1-0.20240426135407-dfcf7db6a1f0
+	cosmossdk.io/x/feegrant => github.com/InjectiveLabs/cosmos-sdk/x/feegrant v0.1.1-0.20240426135407-dfcf7db6a1f0
+	cosmossdk.io/x/upgrade => github.com/InjectiveLabs/cosmos-sdk/x/upgrade v0.1.2-0.20240426135407-dfcf7db6a1f0
+
+	github.com/cometbft/cometbft => github.com/InjectiveLabs/cometbft v0.38.7-0.20240418152006-735e9bd9199c
+
+	github.com/cosmos/cosmos-sdk => github.com/InjectiveLabs/cosmos-sdk v0.50.7-0.20240514143202-0a3109c0d841
+	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
+)
