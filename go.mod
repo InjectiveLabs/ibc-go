@@ -202,13 +202,13 @@ require (
 )
 
 replace (
-	cosmossdk.io/store => github.com/InjectiveLabs/cosmos-sdk/store v1.1.1-0.20240514133821-c9bef3f12c8f
-	cosmossdk.io/x/evidence => github.com/InjectiveLabs/cosmos-sdk/x/evidence v0.1.1-0.20240426135407-dfcf7db6a1f0
-	cosmossdk.io/x/feegrant => github.com/InjectiveLabs/cosmos-sdk/x/feegrant v0.1.1-0.20240426135407-dfcf7db6a1f0
-	cosmossdk.io/x/upgrade => github.com/InjectiveLabs/cosmos-sdk/x/upgrade v0.1.2-0.20240426135407-dfcf7db6a1f0
+	cosmossdk.io/store => github.com/InjectiveLabs/cosmos-sdk/store v1.1.1-0.20240522173845-46ef88f66790
+	cosmossdk.io/x/evidence => github.com/InjectiveLabs/cosmos-sdk/x/evidence v0.1.1-0.20240522173845-46ef88f66790
+	cosmossdk.io/x/feegrant => github.com/InjectiveLabs/cosmos-sdk/x/feegrant v0.1.1-0.20240522173845-46ef88f66790
+	cosmossdk.io/x/upgrade => github.com/InjectiveLabs/cosmos-sdk/x/upgrade v0.1.2-0.20240522173845-46ef88f66790
 
-	github.com/cometbft/cometbft => github.com/InjectiveLabs/cometbft v0.38.7-0.20240418152006-735e9bd9199c
+	github.com/cometbft/cometbft => github.com/InjectiveLabs/cometbft v0.38.7-0.20240522134609-352fee3bb1db
 
-	github.com/cosmos/cosmos-sdk => github.com/InjectiveLabs/cosmos-sdk v0.50.7-0.20240514143202-0a3109c0d841
+	github.com/cosmos/cosmos-sdk => github.com/InjectiveLabs/cosmos-sdk v0.50.7-0.20240522201444-b032a5e2e1c8
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
 )
