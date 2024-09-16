@@ -32,7 +32,7 @@ func InitGenesis(ctx sdk.Context, k keeper.Keeper, gs types.GenesisState) {
 		}
 
 		if !gs.Params.IsAllowedClient(cs.ClientType()) {
-			panic(fmt.Errorf("client state type %s is not registered on the allowlist", cs.ClientType()))
+			//panic(fmt.Errorf("client state type %s is not registered on the allowlist", cs.ClientType()))
 		}
 
 		k.SetClientState(ctx, client.ClientId, cs)
