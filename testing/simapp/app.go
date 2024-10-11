@@ -131,6 +131,7 @@ import (
 	ibctm "github.com/cosmos/ibc-go/v8/modules/light-clients/07-tendermint"
 	ibcmock "github.com/cosmos/ibc-go/v8/testing/mock"
 	ibctestingtypes "github.com/cosmos/ibc-go/v8/testing/types"
+	evmtypes "github.com/evmos/ethermint/x/evm/types"
 )
 
 const appName = "SimApp"
@@ -312,6 +313,7 @@ func NewSimApp(
 
 	tkeys := storetypes.NewTransientStoreKeys(paramstypes.TStoreKey)
 	memKeys := storetypes.NewMemoryStoreKeys(capabilitytypes.MemStoreKey, ibcmock.MemStoreKey)
+	objKeys := storetypes.NewObjectStoreKeys(banktypes.ObjectStoreKey, evmtypes.ObjectStoreKey)
 
 	app := &SimApp{
 		BaseApp:           bApp,
@@ -359,6 +361,7 @@ func NewSimApp(
 		appCodec,
 		runtime.NewKVStoreService(keys[banktypes.StoreKey]),
 		runtime.NewTransientKVStoreService(tkeys[banktypes.TStoreKey]),
+		objKeys[banktypes.ObjectStoreKey],
 		app.AccountKeeper,
 		BlockedAddresses(),
 		authtypes.NewModuleAddress(govtypes.ModuleName).String(),
