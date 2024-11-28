@@ -131,7 +131,8 @@ import (
 	ibctm "github.com/cosmos/ibc-go/v8/modules/light-clients/07-tendermint"
 	ibcmock "github.com/cosmos/ibc-go/v8/testing/mock"
 	ibctestingtypes "github.com/cosmos/ibc-go/v8/testing/types"
-	evmtypes "github.com/evmos/ethermint/x/evm/types"
+
+	evmtypes "github.com/InjectiveLabs/injective-core/injective-chain/modules/evm/types"
 )
 
 const appName = "SimApp"
