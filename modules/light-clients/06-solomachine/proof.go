@@ -1,8 +1,8 @@
 package solomachine
 
 import (
-	apisigning "cosmossdk.io/api/cosmos/tx/signing/v1beta1"
 	errorsmod "cosmossdk.io/errors"
+	apisigning "github.com/cosmos/cosmos-sdk/types/tx/signing"
 
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	"github.com/cosmos/cosmos-sdk/crypto/types/multisig"

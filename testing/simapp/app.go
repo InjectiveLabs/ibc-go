@@ -393,6 +393,7 @@ func NewSimApp(
 		runtime.NewEnvironment(runtime.NewKVStoreService(keys[banktypes.StoreKey]), logger.With(log.ModuleKey, "x/bank")),
 		appCodec,
 		app.AuthKeeper,
+		runtime.NewTransientStoreService(tkeys[banktypes.TStoreKey]),
 		blockedAddrs,
 		govModuleAddr,
 	)
