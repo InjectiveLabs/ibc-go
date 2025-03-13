@@ -7,7 +7,7 @@ import (
 
 	storetypes "cosmossdk.io/store/types"
 
-	crypto "github.com/cometbft/cometbft/proto/tendermint/crypto"
+	crypto "github.com/cometbft/cometbft/api/cometbft/crypto/v1"
 
 	"github.com/cosmos/ibc-go/v8/modules/core/23-commitment/types"
 )

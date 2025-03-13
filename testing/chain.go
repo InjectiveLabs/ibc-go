@@ -21,9 +21,9 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
 	abci "github.com/cometbft/cometbft/abci/types"
+	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
+	cmtprotoversion "github.com/cometbft/cometbft/api/cometbft/version/v1"
 	"github.com/cometbft/cometbft/crypto/tmhash"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	cmtprotoversion "github.com/cometbft/cometbft/proto/tendermint/version"
 	cmttypes "github.com/cometbft/cometbft/types"
 	cmtversion "github.com/cometbft/cometbft/version"
 
@@ -227,7 +227,7 @@ func (chain *TestChain) QueryProofAtHeight(key []byte, height int64) ([]byte, cl
 func (chain *TestChain) QueryProofForStore(storeKey string, key []byte, height int64) ([]byte, clienttypes.Height) {
 	res, err := chain.App.Query(
 		chain.GetContext().Context(),
-		&abci.RequestQuery{
+		&abci.QueryRequest{
 			Path:   fmt.Sprintf("store/%s/key", storeKey),
 			Height: height - 1,
 			Data:   key,
@@ -254,7 +254,7 @@ func (chain *TestChain) QueryProofForStore(storeKey string, key []byte, height i
 func (chain *TestChain) QueryUpgradeProof(key []byte, height uint64) ([]byte, clienttypes.Height) {
 	res, err := chain.App.Query(
 		chain.GetContext().Context(),
-		&abci.RequestQuery{
+		&abci.QueryRequest{
 			Path:   "store/upgrade/key",
 			Height: int64(height - 1),
 			Data:   key,
