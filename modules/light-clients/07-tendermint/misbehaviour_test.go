@@ -3,8 +3,8 @@ package tendermint_test
 import (
 	"time"
 
+	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
 	"github.com/cometbft/cometbft/crypto/tmhash"
-	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
 	tmtypes "github.com/cometbft/cometbft/types"
 
 	clienttypes "github.com/cosmos/ibc-go/v8/modules/core/02-client/types"
@@ -172,7 +172,7 @@ func (suite *TendermintTestSuite) TestMisbehaviourValidateBasic() {
 			},
 			func(misbehaviour *ibctm.Misbehaviour) error {
 				// voteSet contains only altVal which is less than 2/3 of total power (height/1height)
-				wrongVoteSet := tmtypes.NewVoteSet(chainID, int64(misbehaviour.Header1.GetHeight().GetRevisionHeight()), 1, tmproto.PrecommitType, altValSet)
+				wrongVoteSet := tmtypes.NewVoteSet(chainID, int64(misbehaviour.Header1.GetHeight().GetRevisionHeight()), 1, cmtproto.PrecommitType, altValSet)
 				blockID, err := tmtypes.BlockIDFromProto(&misbehaviour.Header1.Commit.BlockID)
 				if err != nil {
 					return err
@@ -193,7 +193,7 @@ func (suite *TendermintTestSuite) TestMisbehaviourValidateBasic() {
 			},
 			func(misbehaviour *ibctm.Misbehaviour) error {
 				// voteSet contains only altVal which is less than 2/3 of total power (height/1height)
-				wrongVoteSet := tmtypes.NewVoteSet(chainID, int64(misbehaviour.Header2.GetHeight().GetRevisionHeight()), 1, tmproto.PrecommitType, altValSet)
+				wrongVoteSet := tmtypes.NewVoteSet(chainID, int64(misbehaviour.Header2.GetHeight().GetRevisionHeight()), 1, cmtproto.PrecommitType, altValSet)
 				blockID, err := tmtypes.BlockIDFromProto(&misbehaviour.Header2.Commit.BlockID)
 				if err != nil {
 					return err

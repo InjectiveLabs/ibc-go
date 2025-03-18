@@ -5,7 +5,7 @@ import (
 
 	errorsmod "cosmossdk.io/errors"
 
-	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
 	tmtypes "github.com/cometbft/cometbft/types"
 
 	clienttypes "github.com/cosmos/ibc-go/v8/modules/core/02-client/types"
@@ -107,7 +107,7 @@ func (misbehaviour Misbehaviour) ValidateBasic() error {
 }
 
 // validCommit checks if the given commit is a valid commit from the passed-in validatorset
-func validCommit(chainID string, blockID tmtypes.BlockID, commit *tmproto.Commit, valSet *tmproto.ValidatorSet) (err error) {
+func validCommit(chainID string, blockID tmtypes.BlockID, commit *cmtproto.Commit, valSet *cmtproto.ValidatorSet) (err error) {
 	tmCommit, err := tmtypes.CommitFromProto(commit)
 	if err != nil {
 		return errorsmod.Wrap(err, "commit is not tendermint commit type")

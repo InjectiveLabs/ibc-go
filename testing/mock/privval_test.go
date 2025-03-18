@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
 	tmtypes "github.com/cometbft/cometbft/types"
 
 	"github.com/cosmos/ibc-go/v8/testing/mock"
@@ -24,8 +24,8 @@ func TestSignVote(t *testing.T) {
 	pv := mock.NewPV()
 	pk, _ := pv.GetPubKey()
 
-	vote := &tmproto.Vote{Height: 2}
-	err := pv.SignVote(chainID, vote)
+	vote := &cmtproto.Vote{Height: 2}
+	err := pv.SignVote(chainID, vote, false)
 	require.NoError(t, err)
 
 	msg := tmtypes.VoteSignBytes(chainID, vote)
@@ -37,7 +37,7 @@ func TestSignProposal(t *testing.T) {
 	pv := mock.NewPV()
 	pk, _ := pv.GetPubKey()
 
-	proposal := &tmproto.Proposal{Round: 2}
+	proposal := &cmtproto.Proposal{Round: 2}
 	err := pv.SignProposal(chainID, proposal)
 	require.NoError(t, err)
 
