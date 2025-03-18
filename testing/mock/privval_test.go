@@ -25,7 +25,7 @@ func TestSignVote(t *testing.T) {
 	pk, _ := pv.GetPubKey()
 
 	vote := &cmtproto.Vote{Height: 2}
-	err := pv.SignVote(chainID, vote)
+	err := pv.SignVote(chainID, vote, false)
 	require.NoError(t, err)
 
 	msg := tmtypes.VoteSignBytes(chainID, vote)

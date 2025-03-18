@@ -184,7 +184,7 @@ require (
 replace (
 	// Use Cosmos SDK v0.50.9-comet1-inj (283af470e9) store
 	cosmossdk.io/store => github.com/InjectiveLabs/cosmos-sdk/store v1.1.1-0.20250317211017-283af470e91a
-
+	cosmossdk.io/core => github.com/InjectiveLabs/cosmos-sdk/core v0.8.1-0.20250317211017-283af470e91a
 	// Use CometBFT v1.0.1 with Mempool lanes and DOG
 	github.com/cometbft/cometbft => github.com/InjectiveLabs/cometbft v1.0.2-0.20250315062455-e9e4c8a0ecb9
 	github.com/cometbft/cometbft/api => github.com/InjectiveLabs/cometbft/api v1.0.1-0.20250315062455-e9e4c8a0ecb9

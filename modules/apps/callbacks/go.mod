@@ -232,6 +232,7 @@ replace github.com/cosmos/ibc-go/modules/capability => ../../capability
 
 replace (
 	// Use Cosmos SDK v0.50.9-comet1-inj (283af470e9) submodules
+	cosmossdk.io/core => github.com/InjectiveLabs/cosmos-sdk/core v0.8.1-0.20250317211017-283af470e91a
 	cosmossdk.io/store => github.com/InjectiveLabs/cosmos-sdk/store v1.1.1-0.20250317211017-283af470e91a
 	cosmossdk.io/x/circuit => github.com/InjectiveLabs/cosmos-sdk/x/circuit v0.1.2-0.20250317211017-283af470e91a
 	cosmossdk.io/x/evidence => github.com/InjectiveLabs/cosmos-sdk/x/evidence v0.50.6-inj-0.0.20250317211017-283af470e91a

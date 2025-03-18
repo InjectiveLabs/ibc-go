@@ -4,8 +4,6 @@ cosmossdk.io/api v0.7.5 h1:eMPTReoNmGUm8DeiQL9DyM8sYDjEhWzL1+nLbI9DqtQ=
 cosmossdk.io/api v0.7.5/go.mod h1:IcxpYS5fMemZGqyYtErK7OqvdM0C8kdW3dq8Q/XIG38=
 cosmossdk.io/collections v0.4.0 h1:PFmwj2W8szgpD5nOd8GWH6AbYNi1f2J6akWXJ7P5t9s=
 cosmossdk.io/collections v0.4.0/go.mod h1:oa5lUING2dP+gdDquow+QjlF45eL1t4TJDypgGd+tv0=
-cosmossdk.io/core v0.11.1 h1:h9WfBey7NAiFfIcUhDVNS503I2P2HdZLebJlUIs8LPA=
-cosmossdk.io/core v0.11.1/go.mod h1:OJzxcdC+RPrgGF8NJZR2uoQr56tc7gfBKhiKeDO7hH0=
 cosmossdk.io/depinject v1.0.0 h1:dQaTu6+O6askNXO06+jyeUAnF2/ssKwrrszP9t5q050=
 cosmossdk.io/depinject v1.0.0/go.mod h1:zxK/h3HgHoA/eJVtiSsoaRaRA2D5U4cJ5thIG4ssbB8=
 cosmossdk.io/errors v1.0.1 h1:bzu+Kcr0kS/1DuPBtUFdWjzLqyUuCiyHjyJB6srBV/0=
@@ -51,6 +49,8 @@ github.com/InjectiveLabs/cometbft/api v1.0.1-0.20250315062455-e9e4c8a0ecb9 h1:9Q
 github.com/InjectiveLabs/cometbft/api v1.0.1-0.20250315062455-e9e4c8a0ecb9/go.mod h1:Ivh6nSCTJPQOyfQo8dgnyu/T88it092sEqSrZSmTQN8=
 github.com/InjectiveLabs/cosmos-sdk v0.50.9-comet1-inj h1:TNWCwLzMd7vKD5Hjdk9r94XQF6XhYHT6FcDotgNHOfQ=
 github.com/InjectiveLabs/cosmos-sdk v0.50.9-comet1-inj/go.mod h1:MGKV8JsuyywQANlUdWMhIylvmSqvG7vPnAQAKtwRemg=
+github.com/InjectiveLabs/cosmos-sdk/core v0.8.1-0.20250317211017-283af470e91a h1:cbD03irmR4QmuoMw9b9j7jkMEZEraNN2dwVibzuLYV4=
+github.com/InjectiveLabs/cosmos-sdk/core v0.8.1-0.20250317211017-283af470e91a/go.mod h1:Pt8kHbk0fuWppYCQsV0744igFFNTD+WTChutUvlu8UA=
 github.com/InjectiveLabs/cosmos-sdk/store v1.1.1-0.20250317211017-283af470e91a h1:XSpvwO6OrbrnRHD268tU40KpjnXxErVroN3Jr+NmNI0=
 github.com/InjectiveLabs/cosmos-sdk/store v1.1.1-0.20250317211017-283af470e91a/go.mod h1:7bsXnzsjjjVOaOwTJTQxEvRbE/ubuDRYPpwoPvCGitA=
 github.com/InjectiveLabs/metrics v0.0.10 h1:BoOwXnCtRRIPmq06jcI20pXZYE758eusaCI5jDOoN4U=
